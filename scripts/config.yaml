@@ -1,0 +1,36 @@
+bag_path: 'data/imu_vicon_demo.bag'
+
+## The script can use poses as TransformStamped messages or using the /tf topic. Please comment/uncomment the following lines accordingly.
+pose_topic: '/vicon/cedricrgbdimu/cedricrgbdimu'
+
+#tf_parent: 'vicon/world'
+#tf_child: 'vicon/cedricrgbdimu/cedricrgbdimu'
+
+
+# IMU topics
+acc_topic: '/camera/accel/sample'
+gyr_topic: '/camera/gyro/sample'
+
+out_path: 'data/'
+
+# Prior for the transformation between the IMU and the pose sensor
+init_pos_x: 0.0
+init_pos_y: 0.0
+init_pos_z: 0.0
+init_rot_x: 0.0
+init_rot_y: 0.0
+init_rot_z: 0.0
+
+gravity: 9.80
+
+
+# IMU noise (m/(s^2*sqrt(Hz))) and (rad/(s*sqrt(Hz)))
+acc_std: 0.02
+gyr_std: 0.002
+
+# Bias random walk (m/(s^3*sqrt(Hz))) and (rad/(s^2*sqrt(Hz)))
+acc_walk: 0.0001
+gyr_walk: 0.0000001
+
+
+
