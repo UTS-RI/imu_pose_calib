@@ -1,19 +1,3 @@
-/**
- *  Author: Cedric LE GENTIL
- *
- *  Copyright 2021 Cedric LE GENTIL
- *
- *  This is a simple example of how to generate the UGPMs
- *  
- *  Disclaimer:
- *  This code is not optimised neither for performance neither for maintainability.
- *  There might still be errors in the code, logic or procedure. Every feedback is welcomed.
- *
- *  For any further question or if you see any problem in that code
- *  le.gentil.cedric@gmail.com
- **/
-
-
 #include <iostream>
 #include <string>
 
