@@ -7,6 +7,7 @@ This is the public implementation of our ACRA 2023 paper __A Gaussian Process ap
 This repository provides a python/C++ toolbox for IMU-to-pose (typically Vicon/motion-capture systems, or robot arm) extrinsic and temporal calibration.
 It uses Gaussian Processes with linear operators to deal with differentiation of the positions data.
 
+![Diagram showing the reference frames and the estimated geometric transformation](doc/problem_overview.png)
 
 
 ## Warning
@@ -63,8 +64,10 @@ The format of the former is `pos_x, pos_y, pos_z, rot_x, rot_y, rot_z, delta_t`.
 
 ## Test dataset
 
-We provide a sample dataset available [here](TODO)
-It has been collected with the internal IMU of an Intel Realsense D435i camera and a Vicon system/
+We provide a sample dataset available in the `data` folder
+It has been collected with the internal IMU of an Intel Realsense D435i camera, a microstrain IMU, and a Vicon system (for the sake of space the camera images and point clouds are not provided).
+
+![Photos of the setup used to collect the sample data](doc/data_sample_setup.png)
 
 
 ## Cite our work
