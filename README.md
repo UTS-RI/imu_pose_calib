@@ -2,14 +2,16 @@
 
 Author: le.gentil.cedric@gmail.com
 
+This is the public implementation of our ACRA 2023 paper __A Gaussian Process approach for IMU to Pose Spatiotemporal Calibration__ available [here](https://ssl.linklings.net/conferences/acra/acra2023_proceedings/views/includes/files/pap112s2.pdf). If you use this code, please cite our work as explained at the end of this document.
+
 This repository provides a python/C++ toolbox for IMU-to-pose (typically Vicon/motion-capture systems, or robot arm) extrinsic and temporal calibration.
 It uses Gaussian Processes with linear operators to deal with differentiation of the positions data.
 
-TODO: Put paper link and bibtex when/if published.
+
 
 ## Warning
 
-This is research code that is not optimised neither for performance nor maintainability.
+This is research code that is not optimised either for performance or maintainability.
 
 ## Install
 
@@ -58,4 +60,21 @@ The program will terminate when both windows are closed.
 
 With the provided configuration file and data sample, the script should write down the IMU-to-pose extrinsics and time-shift in `data/imu_vicon_calib.csv`.
 The format of the former is `pos_x, pos_y, pos_z, rot_x, rot_y, rot_z, delta_t`.
+
+## Test dataset
+
+We provide a sample dataset available [here](TODO)
+It has been collected with the internal IMU of an Intel Realsense D435i camera and a Vicon system/
+
+
+## Cite our work
+
+```bibtex
+@article{legentil2023calib,
+journal = {Australasian Conference on Robotics and Automation, ACRA},
+title = {{A Gaussian Process approach for IMU to Pose Spatiotemporal Calibration}},
+volume = {2023-Decem},
+year = {2023}
+}
+```
 
