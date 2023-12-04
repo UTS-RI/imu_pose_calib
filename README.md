@@ -41,14 +41,14 @@ make -j4
 cd ..
 ```
 
-For running this package you also need to install some python dependencies. The required packages are shown in `scripts/requirements.txt`.
+To run this package you also need to install some Python dependencies. The required packages are shown in `scripts/requirements.txt`.
 
 
 ## Run
 
 You need to update the configuration file `scripts/config.yaml` with the rosbag path, topic names, writing path, initial guess of the extrinsic transformation, etc. The rotation initial guess is given with the rotation vector representation (often called axis-angle).
 
-Note that the IMU topic must be of type `sensor_msgs/Imu` and the poses `geometry_msgs/TransformStamped` or from the _tf_ tree (I am not an expert with the \tf topic with python, I made it work but it is probably not very elegant. Please let me know if you have a better way :) ).
+Note that the IMU topic must be of type `sensor_msgs/Imu` and the poses `geometry_msgs/TransformStamped` or from the _tf_ tree (I am not an expert with the \tf topic with Python, I made it work but it is probably not very elegant. Please let me know if you have a better way :) ).
 
 
 Then run
@@ -56,7 +56,7 @@ Then run
 python scripts/calibrate.py -c scripts/config.yaml
 ```
 
-There will be two sets of plots that will show-up. The calibration should be good if the IMU and Vicon/pose measurements curves overlap nicely (should be the orange and green lines).
+There will be two sets of plots that will show up. The calibration should be good if the IMU and Vicon/pose measurements curves overlap nicely (should be the orange and green lines).
 The program will terminate when both windows are closed.
 
 With the provided configuration file and data sample, the script should write down the IMU-to-pose extrinsics and time-shift in `data/imu_vicon_calib.csv`.
@@ -64,7 +64,7 @@ The format of the former is `pos_x, pos_y, pos_z, rot_x, rot_y, rot_z, delta_t`.
 
 ## Test dataset
 
-We provide a sample dataset available in the `data` folder
+We provide a sample dataset available in the `data` folder.
 It has been collected with the internal IMU of an Intel Realsense D435i camera, a microstrain IMU, and a Vicon system (for the sake of space the camera images and point clouds are not provided).
 
 ![Photos of the setup used to collect the sample data](doc/data_sample_setup.png)
